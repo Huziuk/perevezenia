@@ -1,4 +1,10 @@
 
+if (window.innerWidth <= 768) {
+	const elements = document.querySelectorAll('[data-aos');
+	Array.from(elements).forEach(element => {
+	  element.setAttribute('data-aos', "fade-in")
+	})
+  }
 const prevText = document.querySelectorAll(".preview-text");
 if (prevText) {
 	prevText.forEach(element => {

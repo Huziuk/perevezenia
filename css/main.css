@@ -1046,4 +1046,21 @@ footer {
         width: 100%;
         min-width: 100px;
     }
+    .footer-item {
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    .footer-item::before {
+        width: 15px;
+        height: 15px;
+    }
+    .preview__line {
+        height: 340px;
+    }
+    .preview::after {
+        top: 44%;
+    }
+    .tariffs {
+        margin-top: -120px;
+    }
 }
