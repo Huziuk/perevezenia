@@ -82,6 +82,18 @@ if(document.querySelector(".my-slider")) {
 }
 
 
+const mobileNav = document.querySelector(".mobile-nav");
+const mobileNavBtn = document.querySelector(".mobile-nav-btn");
+const mobileNavCloseBtn = document.querySelector(".close-mobile-nav");
+
+if(mobileNavBtn) {
+	mobileNavBtn.addEventListener("click", () => {
+		mobileNav.classList.remove("d-none")
+	})
+	mobileNavCloseBtn.addEventListener("click", () => {
+		mobileNav.classList.add("d-none")
+	})
+}
 
 
 //  Functions 
