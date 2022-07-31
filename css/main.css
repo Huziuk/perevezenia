@@ -937,7 +937,9 @@ footer {
     .about__text {
         font-size: 14px;
     }
-    
+    .tns-nav {
+        display: none;
+    }
 }
 
 @media (max-width: 685px) {
@@ -1063,4 +1065,5 @@ footer {
     .tariffs {
         margin-top: -120px;
     }
+    
 }
