@@ -2,9 +2,13 @@
 if (window.innerWidth <= 768) {
 	const elements = document.querySelectorAll('[data-aos');
 	Array.from(elements).forEach(element => {
-	  element.setAttribute('data-aos', "fade-in")
+		element.setAttribute('data-aos', "fade-in");
 	})
-  }
+
+	const footer = document.querySelector("footer");
+	footer.removeAttribute("data-aos");
+}
+
 const prevText = document.querySelectorAll(".preview-text");
 if (prevText) {
 	prevText.forEach(element => {
@@ -13,29 +17,29 @@ if (prevText) {
 }
 
 const letters = document.querySelectorAll(".letter");
-if(letters) {
+if (letters) {
 	Array.from(letters).forEach((element, index) => {
 		element.setAttribute("data-aos-delay", index * 50)
 	});
 
 	const prevSubTitle = document.querySelector('.preview__sub-title')
-	if(prevSubTitle) {
+	if (prevSubTitle) {
 		prevSubTitle.setAttribute("data-aos-delay", letters.length * 50)
 	}
 
 	const prevBtn = document.querySelector('.preview-button');
-	if(prevBtn) {
+	if (prevBtn) {
 		prevBtn.setAttribute("data-aos-delay", letters.length * 50)
 	}
 }
 
 const imageText = document.querySelector(".image-text");
-if(imageText){
+if (imageText) {
 	splitText(imageText, "letter2")
 
 	const letter2 = document.querySelectorAll('.letter2');
 
-	if(letter2) {
+	if (letter2) {
 		Array.from(letter2).forEach((element, index) => {
 			element.setAttribute("data-aos-delay", index * 50)
 		});
@@ -64,7 +68,7 @@ AOS.init({
 	anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-if(document.querySelector(".my-slider")) {
+if (document.querySelector(".my-slider")) {
 	var slider = tns({
 		container: '.my-slider',
 		items: 1,
@@ -77,7 +81,7 @@ if(document.querySelector(".my-slider")) {
 		autoplay: true,
 		rewind: true
 	});
-	
+
 	slider.play();
 }
 
@@ -86,7 +90,7 @@ const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavBtn = document.querySelector(".mobile-nav-btn");
 const mobileNavCloseBtn = document.querySelector(".close-mobile-nav");
 
-if(mobileNavBtn) {
+if (mobileNavBtn) {
 	mobileNavBtn.addEventListener("click", () => {
 		mobileNav.classList.remove("d-none")
 	})
@@ -99,10 +103,10 @@ if(mobileNavBtn) {
 //  Functions 
 
 function splitText(el, className = "letter") {
-	
+
 	el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
 		return `<div class="word">` +
-			m.replace(/(-|#|@)?\S(-|#|@)?/g, '<div  data-aos="fade-in" class="'+ className +'">$&</div>') +
+			m.replace(/(-|#|@)?\S(-|#|@)?/g, '<div  data-aos="fade-in" class="' + className + '">$&</div>') +
 			`</div>`;
 	});
 }
