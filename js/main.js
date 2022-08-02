@@ -98,7 +98,21 @@ if (mobileNavBtn) {
 		mobileNav.classList.add("d-none")
 	})
 }
+const html = document.getElementsByTagName("html")[0]
+const header = document.querySelector("header")
+console.log(header);
 
+let scrollTop = html.scrollTop;
+
+window.addEventListener('scroll', () => {
+
+	if(scrollTop > 150) {
+	  header.classList.add("active")
+	} else {
+	  header.classList.remove("active")
+	}
+	scrollTop = html.scrollTop;
+  });
 
 //  Functions 
 
