@@ -872,7 +872,7 @@ footer {
     }
 
     .previev-inner {
-        padding-top: 55px;
+        padding-top: 130px;
     }
 
     .tariffs {
@@ -1128,6 +1128,7 @@ footer {
 
     .tariffs {
         margin-top: -150px;
+        margin-bottom: 80px;
     }
 
     .footer-inner {
@@ -1155,8 +1156,8 @@ footer {
         height: 210px;
         top: 40%;
     }
-
     .previev-inner {
+        padding-top: 95px;
         margin-bottom: 150px;
     }
 
