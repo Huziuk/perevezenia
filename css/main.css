@@ -229,7 +229,7 @@ header.active {
     width: 1330px;
     height: 680px;
     background: url(../images/preview.png) center/cover no-repeat transparent;
-    top: 13%;
+    top: 16%;
     right: 0;
     z-index: 20;
 }
@@ -240,11 +240,11 @@ header.active {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    height: 995px;
+    height: 1040px;
     margin: 0 auto;
     /* top: 90%; */
     background: url(../svg/vector.svg) center/cover no-repeat transparent;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     z-index: 10;
 }
 
