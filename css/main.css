@@ -29,6 +29,7 @@ ul {
     margin: 0;
 }
 
+
 li {
     display: inline-block;
     list-style: none;
@@ -264,6 +265,9 @@ header.active {
     margin-bottom: 45px;
     font-size: 28px;
     font-weight: 300;
+    margin-top: 20px;
+    color: var(--second-color);
+    /* text-decoration: underline; */
 }
 
 .preview__title span {
@@ -508,6 +512,23 @@ footer {
 
 .about .title {
     margin-bottom: 105px;
+}
+
+.about__right-item ul {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.about__right-item li{
+    position: relative;
+    padding-left: 15px;
+    color: var(--primaty-color);
+    opacity: .8;
+    display: block;
+}
+.about__right-item li::after{
+    content: "-";
+    position: absolute;
+    left: 0;
 }
 
 .about {
