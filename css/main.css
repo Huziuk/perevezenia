@@ -1097,6 +1097,9 @@ footer {
     .tns-nav {
         display: none;
     }
+    .about__right-item li{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 685px) {
@@ -1267,5 +1270,8 @@ footer {
 
     .tariffs {
         margin-top: -120px;
+    }
+    .about__right-item li{
+        font-size: 12px;
     }
 }
