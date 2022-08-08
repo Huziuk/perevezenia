@@ -130,12 +130,21 @@ header.active {
 
 .header__contact {
     display: flex;
-    margin-left: 60px;
+    margin-left: 20px;
     padding-right: 35px;
     position: relative;
     font-family: "Montserrat";
     font-size: 16px;
     font-weight: 500;
+}
+
+.header__contact.viber{
+    margin-left: 60px;
+}
+.header__contact.viber::after{
+    background-image: url(../svg/viber.svg);
+    background-size: 85%;
+    opacity: .9;
 }
 
 .header__contact::after {
@@ -266,8 +275,10 @@ header.active {
     font-size: 28px;
     font-weight: 300;
     margin-top: 20px;
-    color: var(--second-color);
-    /* text-decoration: underline; */
+    /* color: var(--second-color); */
+    padding: 0 10px;
+    display: inline-block;
+    background-color: var(--bg-color);
 }
 
 .preview__title span {
@@ -985,6 +996,10 @@ footer {
         display: none;
     }
 
+    .vant {
+        text-align: center;
+    }
+
     .image-text {
         display: none;
     }
@@ -1079,6 +1094,15 @@ footer {
     }
 }
 
+@media (max-width: 880px) {
+    .header__nav ul {
+        display: none;
+    }
+    .mobile-nav-btn {
+        display: flex;
+    }
+}
+
 @media (max-width: 860px) {
     .footer-inner {
         flex-direction: column;
@@ -1113,10 +1137,6 @@ footer {
         padding-bottom: 20px;
     }
 
-    .header__nav ul {
-        display: none;
-    }
-
     .about__img {
         margin-right: 20px;
     }
@@ -1126,17 +1146,6 @@ footer {
         font-size: 18px;
     }
 
-    .header__contact {
-        /* padding: 0; */
-    }
-
-    .header__contact::after {
-        /* display: none; */
-    }
-
-    .mobile-nav-btn {
-        display: flex;
-    }
 }
 
 @media (max-width: 600px) {
@@ -1172,6 +1181,41 @@ footer {
 
     .why-item {
         width: 95%;
+    }
+}
+
+@media (max-width: 590px) {
+    .header__contact.viber,
+    .header__contact{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .header__contact{
+        font-size: 12px;
+        padding-right: 25px;
+    }
+    .header__contact::after{
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header__contact.viber,
+    .header__contact{
+        margin-left: 10px;
+        padding-right: 20px;
+
+    }
+    .logo {
+        width: 40px;
+    }
+    .mobile-nav-btn {
+        width: 20px;
+        height: 12px;
+        margin-left: 10px;
     }
 }
 
